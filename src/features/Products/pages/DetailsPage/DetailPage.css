@@ -1,0 +1,93 @@
+hr{
+    color: var(--main-text-color);
+    width: 80%;
+}
+.details{
+    color: var(--main-text-color);
+    margin-top: 5%;
+}
+.details_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.details img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+.details_info{
+    margin-top: 40px;
+    position: relative;
+}
+.details_info-name{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.details_info-price{
+    color: rgb(185, 29, 29);
+    font-weight: 600;
+}
+.details_info-toppings{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    flex-wrap: wrap;
+}
+.details_info-sugar{
+    display: flex;
+    align-items: flex-end;
+}
+.details_info-sugar .form-select{
+    margin-left: 10px;
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid var(--main-text-color);
+}
+.details_info-ice{
+    display: flex;
+    align-items: flex-end;
+}
+.details_info-ice .form-select{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid var(--main-text-color);
+}
+.details_info-qty{
+    margin-top: 10px;
+}
+.details_info-qty input{
+    margin-left: 10px;
+    border: none;
+    width: 50px;
+}
+.details_info-qty input:focus-visible{
+    outline: none;
+}
+.btn-add{
+    background-color: rgb(155, 9, 9);
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 992px){   
+    .details img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 768px){   
+    .details img{
+        object-fit: contain;
+    }
+    .btn-add{
+        position:relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
