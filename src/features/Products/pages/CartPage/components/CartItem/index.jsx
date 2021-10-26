@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { IMAGES } from '../../../../../../app/logo';
+import React from 'react';
+import domain from '../../../../../../configs/domain';
 
 CartItem.propTypes = {
     cartItem: PropTypes.object,
@@ -14,6 +14,7 @@ CartItem.defaultProps = {
 
 function CartItem(props) {
     const { cartItem, onHandleDelete } = props;
+    // console.log(cartItem)
     const handleDelete = () => {
         if (onHandleDelete) {
             onHandleDelete(cartItem);
@@ -23,7 +24,7 @@ function CartItem(props) {
         <>
             <tr className="cart_product">
                 <td className="cart_product-img">
-                    <img src={IMAGES.ts1} alt="" />
+                    <img src={domain.imageUrl + cartItem.image} alt="" />
                 </td>
                 <td className="cart_product-name">{cartItem.product.name}
                     {cartItem.toppings.length === 0 ? '' :

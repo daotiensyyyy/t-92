@@ -1,0 +1,34 @@
+.add{
+    margin-top: 60px;
+    color: white;
+    padding: 0px;
+    /* min-height: 600px; */
+    height: 100%;
+}
+.add__form{
+    color: var(--main-text-color);
+    padding: 50px 150px;
+}
+.add__title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: var(--main-text-color);
+}
+.add__form input, .form-select{
+    border: 1px solid var(--main-text-color);
+}
+.add__form input:focus-visible{
+    outline: none;
+}
+.add__form input:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 768px){
+    .add__form{
+        color: var(--main-text-color);
+        padding: 50px 48px;
+    }
+ }

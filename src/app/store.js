@@ -4,14 +4,16 @@ import {
 } from 'reduxjs-toolkit-persist'
 import storage from 'reduxjs-toolkit-persist/lib/storage';
 import productReducer from '../features/Products/productSlice';
+import authReducer from '../features/Auth/authSlice';
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['products', 'details', 'events'],
+  whitelist: ['products', 'details', 'events', 'auth'],
 }
 
 const reducers = combineReducers({
+  auth: authReducer,
   products: productReducer,
 });
 

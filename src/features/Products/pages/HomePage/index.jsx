@@ -28,6 +28,7 @@ function HomePage(props) {
     }
     const productState = useSelector(state => state.products);
     const { products, categories } = productState;
+    // console.log('products', products);
     const handleAddClick = (product) => {
         const productUrl = `${product.slug}`;
         history.push(productUrl);

@@ -1,0 +1,41 @@
+.admin{
+    margin-top: 60px;
+    color: white;
+    padding: 0px;
+    /* min-height: 600px; */
+    height: 100%;
+}
+.label-search{
+    color: var(--main-text-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.search{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px;
+    margin-right: 10px;
+}
+#search{
+    border: 1px solid rgb(182, 182, 182);
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.table{
+    color: var(--main-text-color);
+    padding: 16px;
+    border-color: rgb(121, 121, 121);
+}
+.table th, td{
+    font-weight: 500;
+}
+.table i{
+    margin-left: 10px;
+    cursor: pointer;
+}
+@media screen and (max-width: 330px){ 
+    #search{
+        margin-left: 0;
+    }
+}

@@ -33,11 +33,17 @@ export const fetchProductBySlug = createAsyncThunk(
     }
 );
 
+export const placeOrder = createAsyncThunk(
+    'placeOrder',
+    async (data) => await api.placeOrder(data)
+)
+
 const initialState = {
     categories: [],
     products: [],
     details: {},
     cart: [],
+    order: [],
     discounts: [],
 }
 
@@ -50,7 +56,10 @@ export const productSlice = createSlice({
         },
         deleteFromCart: (state, action) => {
             const itemId = action.payload;
-            state.cart.splice(itemId, 1);
+            // console.log('deleteItem', itemId);
+            // state.cart.splice(itemId, 1);
+            state.cart = state.cart.filter(cart => cart.id !== itemId);
+            // return state.cart;
         },
         addNewEvents: (state, action) => {
             state.discounts.push(action.payload);
@@ -68,6 +77,10 @@ export const productSlice = createSlice({
         });
         builder.addCase(fetchProductBySlug.fulfilled, (state, action) => {
             state.details = action.payload;
+        });
+        builder.addCase(placeOrder.fulfilled, (state, action) => {
+            state.order = action.payload;
+            // state.cart = [];
         });
     },
 });

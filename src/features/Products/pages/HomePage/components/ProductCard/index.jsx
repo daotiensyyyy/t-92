@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { IMAGES } from '../../../../../../app/logo';
+import React from 'react';
+import domain from '../../../../../../configs/domain';
 
 ProductCard.propTypes = {
     product: PropTypes.object,
@@ -13,15 +13,17 @@ ProductCard.defaultProps = {
 
 function ProductCard(props) {
     const { product, onAddClick } = props;
+    // console.log('product', product);
     const handleClick = () => {
         if (onAddClick) {
             onAddClick(product);
         }
     }
+    const srcImage = domain.imageUrl + product.image;
     return (
         <>
             <div className="card" onClick={handleClick}>
-                <img src={IMAGES.ts1} className="card-img-top" alt="..." />
+                <img src={srcImage} className="card-img-top" alt={product.name} />
                 <div className="card-body">
                     <h5 className="card-title">{product.name}</h5>
                 </div>

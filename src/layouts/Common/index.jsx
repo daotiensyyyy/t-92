@@ -5,6 +5,7 @@ import CartPage from '../../features/Products/pages/CartPage';
 import EventPage from '../../features/Products/pages/EventPage';
 import DetailsPage from '../../features/Products/pages/DetailsPage';
 const HomePage = React.lazy(() => import('../../features/Products/pages/HomePage'));
+const LoginPage = React.lazy(() => import('../../features/Login/pages/LoginPage'));
 function Common(props) {
     return (
         <>
@@ -12,6 +13,7 @@ function Common(props) {
                 <Route exact path="/" component={HomePage} />
                 <Route path="/events" component={EventPage} />
                 <Route path="/cart" component={CartPage} />
+                <Route path="/login" component={LoginPage} />
                 <Route path="/:slug" component={DetailsPage} />
             </Switch>
         </>

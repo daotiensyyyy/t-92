@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
-import BackToTop from '../../../../components/BackToTop';
-import { addToCart, fetchProductBySlug } from '../../productSlice';
 import { v4 as uuidv4 } from 'uuid';
+import BackToTop from '../../../../components/BackToTop';
+import domain from '../../../../configs/domain';
+import { addToCart, fetchProductBySlug } from '../../productSlice';
 import './DetailPage.css';
-import { IMAGES } from '../../../../app/logo';
 
 const toppings = [
     {
@@ -95,6 +95,9 @@ function DetailsPage(props) {
     }
     const [qty, setQty] = useState(1);
     const handleQtyChange = (e) => {
+        if (e.target.value <= 0) {
+            e.target.value = 1;
+        }
         setQty(e.target.value);
     }
     const handleAddToCart = () => {
@@ -107,16 +110,18 @@ function DetailsPage(props) {
             price: details.price + priceToppings,
             qty: qty,
             totalPrice: (priceToppings + details.price) * qty,
+            image: details.image,
         }
         dispatch(addToCart(itemCart));
         history.push('/');
     }
+
     return (
         <div className="tea">
             <BackToTop onHandleBackToTop={handleBackToTop} />
             <div className="row details">
                 <div className="col-xl-5 col-lg-5 col-md-5 col-sm-12 details_img">
-                    <img src={IMAGES.ts1} alt="" />
+                    <img src={domain.imageUrl + details.image} alt={details.name} />
                 </div>
                 <div className="col-xl-7 col-lg-7 col-md-7 col-sm-12 details_info">
                     <h2 className="details_info-name">{details.name}</h2>

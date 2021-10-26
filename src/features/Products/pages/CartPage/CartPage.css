@@ -68,11 +68,17 @@ hr{
     margin-right: 10px;
     margin-left: 5px;
 }
+.cart__total{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
 .checkout{
     display: flex;
     justify-content: center;
     margin-top: 3%;
     margin-right: 10px;
+    align-items: center;
 }
 .checkout-submit-button{
     background-color: rgb(155, 9, 9);
@@ -134,7 +140,17 @@ hr{
     cursor: pointer;
     background-color: rgb(155, 9, 9);
 }
+.checkout-action__reset{
+    margin-left: 5px;
+    color: rgb(155, 9, 9);
+    cursor: pointer;
+}
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 @media screen and (max-width: 992px){
     .checkout-form form{
         padding: 20px 32px;
