@@ -41,6 +41,7 @@ export const placeOrder = createAsyncThunk(
 const initialState = {
     categories: [],
     products: [],
+    toppings: [],
     details: {},
     cart: [],
     order: [],
@@ -64,6 +65,9 @@ export const productSlice = createSlice({
         addNewEvents: (state, action) => {
             state.discounts.push(action.payload);
         },
+        addToppings: (state, action) => {
+            state.toppings.push(action.payload);
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchAllCategories.fulfilled, (state, action) => {
@@ -86,5 +90,5 @@ export const productSlice = createSlice({
 });
 
 const { actions } = productSlice;
-export const { addToCart, deleteFromCart, addNewEvents } = actions;
+export const { addToCart, deleteFromCart, addNewEvents, addToppings } = actions;
 export default productSlice.reducer;
