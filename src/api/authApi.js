@@ -8,7 +8,7 @@ const authApi = {
         return axios({
             url: `${domain.adminUrl}/all-products`,
             method: 'GET',
-            withCredentials: true,
+            withCredentials: false,
         });
     },
 
@@ -23,7 +23,11 @@ const authApi = {
             url: `${domain.adminUrl}/create-product`,
             method: 'POST',
             data: formData,
-            headers: { "Content-Type": "multipart/form-data" },
+            headers: {
+                "Content-Type": "multipart/form-data",
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            },
             withCredentials: true,
         });
     },
