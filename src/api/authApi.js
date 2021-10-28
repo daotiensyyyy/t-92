@@ -1,6 +1,6 @@
 import axios from "axios";
 import domain from "../configs/domain";
-// axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
 const authApi = {
 
@@ -8,7 +8,7 @@ const authApi = {
         return axios({
             url: `${domain.adminUrl}/all-products`,
             method: 'GET',
-            withCredentials: false,
+            withCredentials: true,
         });
     },
 
