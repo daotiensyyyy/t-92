@@ -8,6 +8,10 @@ const authApi = {
         return axios({
             url: `${domain.adminUrl}/all-products`,
             method: 'GET',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            },
             withCredentials: true,
         });
     },
