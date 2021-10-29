@@ -144,6 +144,9 @@ hr{
 .side-bar__menu-logo:hover{
     cursor: pointer;
 }
+.side-bar__menu-logo-name{
+    margin-left: 16px;
+}
 .side-bar__menu-logo img{
     width: 100px;
     height: 100px;

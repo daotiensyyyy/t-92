@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
-import { IMAGES } from '../../app/logo';
+import { Link, useHistory } from 'react-router-dom';
 
 function SideBar(props) {
     const history = useHistory();
@@ -16,8 +14,8 @@ function SideBar(props) {
             <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 side-bar">
                 <div className="side-bar__menu">
                     <div className="side-bar__menu-logo" onClick={handleLogoClick}>
-                        <img src={IMAGES.logo1} alt="" className="" />
-                        <span className="side-bar__menu-logo-name">1992Tea</span>
+                        {/* <img src={IMAGES.logo1} alt="" className="" /> */}
+                        <span className="side-bar__menu-logo-name">Brand</span>
                     </div>
                     <ul className="side-bar__menu-list">
                         <li className="side-bar__menu-item">
@@ -50,8 +48,8 @@ function SideBar(props) {
                             : ''}
                         <hr />
                         <div className="side-bar__contact">
-                            <div className="side-bar__contact-address">101 Nguyễn Thị Minh Khai, LK-DN</div>
-                            <div className="side-bar__contact-phone">0904468744</div>
+                            <div className="side-bar__contact-address">address</div>
+                            <div className="side-bar__contact-phone">phone</div>
                         </div>
                     </ul>
                 </div>
@@ -59,8 +57,8 @@ function SideBar(props) {
             <div className="side-bar-mobile">
                 <div className="side-bar-mobile__menu">
                     <div className="side-bar-mobile__menu-logo" onClick={handleLogoClick}>
-                        <img src={IMAGES.logo1} alt="" className="" />
-                        <span className="side-bar-mobile__menu-logo-name">1992Tea</span>
+                        {/* <img src={IMAGES.logo1} alt="" className="" /> */}
+                        <span className="side-bar-mobile__menu-logo-name">Brand</span>
                     </div>
                     <ul className="side-bar-mobile__menu-list">
                         <li className="side-bar-mobile__menu-item">
@@ -93,8 +91,8 @@ function SideBar(props) {
                             : ''}
                         <hr />
                         <div className="side-bar-mobile__contact">
-                            <div className="side-bar-mobile__contact-address">101 Nguyễn Thị Minh Khai, LK-DN</div>
-                            <div className="side-bar-mobile__contact-phone">0904468744</div>
+                            <div className="side-bar-mobile__contact-address">address</div>
+                            <div className="side-bar-mobile__contact-phone">phone</div>
                         </div>
                     </ul>
                 </div>
