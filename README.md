@@ -12,33 +12,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+![image](https://user-images.githubusercontent.com/55313833/140252302-9b2289d0-86c5-4122-ab1a-990672fc4b9d.png)
+![image](https://user-images.githubusercontent.com/55313833/140252346-ab8d765c-c143-47db-9204-5a4a25a1a9f9.png)
+![image](https://user-images.githubusercontent.com/55313833/140252382-7b7d3bb3-7a22-4fe4-80ad-7d0f1424862f.png)
+![image](https://user-images.githubusercontent.com/55313833/140252521-bc160b3b-ae56-4f17-bc28-c9dcfdcdffc9.png)
+![image](https://user-images.githubusercontent.com/55313833/140252587-370b944b-2bda-4e82-808f-1626c974dcd9.png)
+![image](https://user-images.githubusercontent.com/55313833/140252621-4c5edf34-3aa1-427f-8e28-afda1e435b1a.png)
+![image](https://user-images.githubusercontent.com/55313833/140252750-38f334c0-bd6e-4cef-80cb-04db9939b1a2.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
